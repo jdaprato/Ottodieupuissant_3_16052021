@@ -1,0 +1,25 @@
+{
+  "name": "p3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pushdev": "git add . && git commit -m 'update' && git push origin dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyprienotto/Ottodieupuissant_3_16052021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cyprienotto/Ottodieupuissant_3_16052021/issues"
+  },
+  "homepage": "https://github.com/cyprienotto/Ottodieupuissant_3_16052021#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.3.0",
+    "postcss-cli": "^8.3.1",
+    "sass": "^1.34.0"
+  }
+}
