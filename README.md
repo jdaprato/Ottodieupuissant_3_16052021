@@ -1,5 +1,24 @@
 ###### Ohmyfood,
 
+## Identité graphique
+    Polices
+        Logo et titres: Shrikhand
+        Texte: Roboto
+    Couleurs
+        Primaire
+        #9356DC
+        Secondaire
+        #FF79DA
+        Tertiaire
+        #99E2D0
+
+## Technologies
+    ● Le développement devra se faire en CSS, sans JavaScript.
+    ● Aucun framework ne devra être utilisé, en revanche l’utilisation de SASS serait un
+    plus.
+    ● Aucun code CSS ne devra être appliqué via un attribut style dans une balise HTML.
+
+
 # @Objectif
 - Création du site Ohmyfood! Paris.
 
