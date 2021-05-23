@@ -12,11 +12,14 @@
         Tertiaire
         #99E2D0
 
+
 ## Technologies
     ● Le développement devra se faire en CSS, sans JavaScript.
     ● Aucun framework ne devra être utilisé, en revanche l’utilisation de SASS serait un
     plus.
     ● Aucun code CSS ne devra être appliqué via un attribut style dans une balise HTML.
+    ● Les pages devront passer la validation W3C en HTML et CSS sans erreur.
+    ● Le site doit être parfaitement compatible avec les dernières versions desktop de Chrome et Firefox.
 
 
 # @Objectif
