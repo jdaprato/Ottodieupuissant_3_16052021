@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf node_modules && rm -rf package-lock.json && npm cache clean --force",
-    "pushdev": "git add . && git commit -m 'update' && git push origin dev"
+    "pushdev": "git add . && git commit -m 'update' && git push origin dev",
+    "sass": "sass --watch ./sass/index.scss:./css/index.css --style compressed",
+    "prefix": "postcss ./css/index.css --use autoprefixer -d ./css/prefixed"
   },
   "repository": {
     "type": "git",
