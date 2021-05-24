@@ -1,5 +1,15 @@
-// bases
-// components
-// layout
-// pages
+
 // utils
+@import "./utils/variables";
+
+// // bases
+@import "./bases/index";
+
+// // components
+// @import "./components/index";
+
+// layout
+@import "./layout/footer";
+
+// // pages
+// @import "./pages/index";
