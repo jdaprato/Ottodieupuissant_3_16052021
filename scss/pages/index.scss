@@ -5,8 +5,6 @@
         background: $bg-welcome;
 
         #presentation__logo {
-            font-size: 3rem;
-            margin-top: 3rem;
         }
 
         #presentation__location {
@@ -51,24 +49,14 @@
         background: white;
 
         #methods {
-            width: 100%;
-            padding-top: 2rem;
-            padding-bottom: 2rem;
             ol {
-                display: flex;
-                flex-wrap: wrap;
+                padding-left: 3rem;
                 counter-reset: number; 
             }
             & .fas {
-                color: $primary-color;
-                margin-right: 1rem;          
+                color: $primary-color;      
             }            
             li {
-                display: flex;
-                align-items: center;
-                padding: 1rem;
-                border-radius: 1rem;
-                margin-right: 2rem;
                 background-color: $bg-welcome;
                 counter-increment: number;
                 position: relative;
@@ -88,18 +76,22 @@
                     content: counter(number);
                     background: $primary-color;
                     border-radius: 60px;
-                    font-size: 12px;
                     color: white;
                     position: absolute;	
-                    padding: 0.5rem 0.8rem;
-                    left: -1.5rem;
-                    top: 0.9rem;
-                    vertical-align: top;
                 } 
             }
         }
-        
-        #restaurants-lists {
+        & #restaurants-lists {
+            display: grid;
+            grid-template-columns: auto;
+            gap: 1rem;
+            & #restaurants-lists__cards {
+                padding-left: 3rem;
+                & .card-item {
+                    &__img-wrap {}
+                    &__text-wrap {}
+                }
+            }
         }
     }
 }
