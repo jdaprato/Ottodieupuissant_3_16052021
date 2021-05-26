@@ -50,7 +50,54 @@
         grid-area: grid_method-resto;
         background: white;
 
-        #methods {}
+        #methods {
+            width: 100%;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            ol {
+                display: flex;
+                flex-wrap: wrap;
+                counter-reset: number; 
+            }
+            & .fas {
+                color: $primary-color;
+                margin-right: 1rem;          
+            }            
+            li {
+                display: flex;
+                align-items: center;
+                padding: 1rem;
+                border-radius: 1rem;
+                margin-right: 2rem;
+                background-color: $bg-welcome;
+                counter-increment: number;
+                position: relative;
+                @include btn-shadow-mixin();
+                &:hover {
+                    background-color: $hover-color;    
+                    cursor: pointer;
+                    & .fas {
+                        color: $secondary-color;      
+                    } 
+                    &::before{
+                        background: $secondary-color;
+                        color: white;
+                    }
+                }
+                &::before{
+                    content: counter(number);
+                    background: $primary-color;
+                    border-radius: 60px;
+                    font-size: 12px;
+                    color: white;
+                    position: absolute;	
+                    padding: 0.5rem 0.8rem;
+                    left: -1.5rem;
+                    top: 0.9rem;
+                    vertical-align: top;
+                } 
+            }
+        }
         
         #restaurants-lists {
         }
