@@ -1,147 +1,125 @@
 #home-wrapper {
     background: $bg-welcome;
+}
 
-    #presentation {
-        background: $bg-welcome;
+#presentation {
+    background: $bg-welcome;
 
-        #presentation__logo {
-        }
-
-        #presentation__location {
-            #presentation__location__search {
-                border-radius: 20px;
-                height: 50px;
-                background: linear-gradient(0, $bg-search 90%, darken($bg-search, 10) 100%);
-
-                & input {
-                    border-radius: 3rem;
-                    border: none;
-                    background: $bg-search;
-                    color: $bg-footer;
-                }
-            }
-            
-            h2 {
-                font-size: $font-size-h2;
-            }
-            p {
-                font-size: $font-size-h3;
-            }
-
-
-            #presentation__location__submit__btn {
-                @include btn-bg-with-styles-mixin();
-                cursor: pointer;
-                font-size: $font-size-h3;
-                border-color: white;
-                width: 90%;
-                &:hover{
-                    background: $secondary-color;
-                    @include btn-shadow-dark-mixin();
-                }
-            }
-        }
+    #presentation__logo {
     }
 
-    #method-resto {
-        padding: 2rem;
-        grid-area: grid_method-resto;
-        background: white;
+    #presentation__location {
+        #presentation__location__search {
+            border-radius: 20px;
+            height: 50px;
+            background: linear-gradient(0, $bg-search 90%, darken($bg-search, 10) 100%);
 
-        #methods {
-            ol {
-                padding-left: 3rem;
-                counter-reset: number; 
-            }
-            & .fas {
-                color: $primary-color;      
-            }            
-            li {
-                background-color: $bg-welcome;
-                counter-increment: number;
-                position: relative;
-                @include btn-shadow-mixin();
-                &:hover {
-                    background-color: $hover-color;    
-                    cursor: pointer;
-                    & .fas {
-                        color: $secondary-color;      
-                    } 
-                    &::before{
-                        background: $secondary-color;
-                        color: white;
-                    }
-                }
-                &::before{
-                    content: counter(number);
-                    background: $primary-color;
-                    border-radius: 60px;
-                    color: white;
-                    position: absolute;	
-                } 
+            & input {
+                border-radius: 3rem;
+                border: none;
+                background: $bg-search;
+                color: $bg-footer;
             }
         }
-        & #restaurants-lists {
+        
+        h2 {
+            font-size: $font-size-h2;
+        }
+        p {
+            font-size: $font-size-h3;
+        }
+
+        .brand-btn {
+            width: 90%;
+            font-size: $font-size-h3;
+        }
+    }
+}
+
+#method-resto {
+    padding: 2rem;
+    grid-area: grid_method-resto;
+    background: white;
+
+    #methods {
+        ol {
+            padding-left: 3rem;
+            counter-reset: number; 
+        }
+        & .fas {
+            color: $primary-color;      
+        }            
+        li {
+            background-color: $bg-welcome;
+            counter-increment: number;
+            position: relative;
+            @include btn-shadow-mixin();
+            &:hover {
+                background-color: $hover-color;    
+                cursor: pointer;
+                & .fas {
+                    color: $secondary-color;      
+                } 
+                &::before{
+                    background: $secondary-color;
+                    color: white;
+                }
+            }
+            &::before{
+                content: counter(number);
+                background: $primary-color;
+                border-radius: 60px;
+                color: white;
+                position: absolute;	
+            } 
+        }
+    }
+    & #restaurants-lists {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 1rem;
+        & #restaurants-lists__cards {
             display: grid;
-            grid-template-columns: auto;
-            gap: 1rem;
-            & #restaurants-lists__cards {
-                display: grid;
-                grid-template-columns: auto auto;
-                grid-template-rows: auto auto;
-                padding-top: -1.5rem;
-                padding-left: 3rem;
-                & .card-item {
-                    margin-bottom: 0.5rem;
-                    @include shadow-mixin();
-                    border-top-left-radius: 0.8rem;
-                    border-top-right-radius: 0.8rem;
-                    color: black;
-                    &__img-wrap {
-                        position: relative;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+            padding-top: -1.5rem;
+            padding-left: 3rem;
+            & .card-item {
+                margin-bottom: 0.5rem;
+                @include shadow-mixin();
+                border-top-left-radius: 0.8rem;
+                border-top-right-radius: 0.8rem;
+                color: black;
+                &__img-wrap {
+                    position: relative;
 
-                        img {
-                            border-top-left-radius: 0.8rem;
-                            border-top-right-radius: 0.8rem;
-                        }
-
-                        & span {
-                            padding: 0.5rem 0.8rem;
-                            background-color:$bg-color;
-                            color: $new-color;
-                            position: absolute;
-                            top:12px;
-                            right: 22px;
-                            border-radius: 0.8rem;
-                        }
+                    img {
+                        border-top-left-radius: 0.8rem;
+                        border-top-right-radius: 0.8rem;
                     }
-                    &__text-wrap {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
-                        border-bottom-left-radius: 0.8rem;
-                        border-bottom-right-radius: 0.8rem;
-                        padding: 0.5rem 0.8rem  0.1rem 0.8rem;
-                        background-color: whitesmoke;
-                        @include shadow-mixin();
-                        &__title {
-                            font-weight: 600;
-                            font-size: 1rem;
-                        }
-                        .emptyheart {
-                            &:hover {
-                                display: none; 
-                                color: $secondary-color;
 
-                                +.fullheart{
-                                    display: inherit;
-                                }
-                            }
-                        }
-                        .fullheart {
-                            display: none;
-                            color: $secondary-color;
-                        }
+                    & span {
+                        padding: 0.5rem 0.8rem;
+                        background-color:$bg-new-color;
+                        color: $new-color;
+                        position: absolute;
+                        top:12px;
+                        right: 22px;
+                        border-radius: 0.8rem;
+                    }
+                }
+                &__text-wrap {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    border-bottom-left-radius: 0.8rem;
+                    border-bottom-right-radius: 0.8rem;
+                    padding: 0.5rem 0.8rem  0.1rem 0.8rem;
+                    background-color: whitesmoke;
+                    @include shadow-mixin();
+                    &__title {
+                        font-weight: 600;
+                        font-size: 1rem;
                     }
                 }
             }

@@ -7,11 +7,12 @@
 @import "./bases/index";
 
 // components
-// @import "./components/index";
+@import "./components/index";
 
 // layout
 @import "./layout/footer";
 
 // pages
 @import "./pages/index";
+@import "./pages/restaurants-pages";
 @import "./pages/responsive/index";

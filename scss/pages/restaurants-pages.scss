@@ -1,0 +1,188 @@
+.section-resto {
+    display: grid;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+    overflow: scroll;
+    height: 110%;
+    & header {
+        justify-self: start;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: auto;
+        justify-items: center;
+        align-items: center;
+        position: relative;
+        & a {
+            position: absolute;
+            left: 2rem;
+            color: black;
+            font-size: 2rem;
+        }
+        & h1 {
+            font-size: 2rem;
+        }
+    }
+    .menu-order {
+        margin-top: -2rem;
+        display: grid;
+        grid-template-columns: auto;
+        justify-items: center;
+        align-items: center;
+        width: 50vw;
+        background: $bg-welcome;
+        &__img {
+            background: $bg-welcome;
+            &__wrapper {
+                background: $bg-welcome;
+                width: 99.6%;
+                height: 99.6%;
+                & img {
+                    object-fit: cover;
+                    width: 99.6%;
+                    height: 240px;
+                    border-radius: 22px;
+                }
+            }
+            &__text {
+                margin-top: -2rem;
+                width: 100%;
+                background: $bg-welcome;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                position: relative;
+                &__title {
+                    background: $bg-welcome;
+                    border-top-left-radius: 3rem;
+                    border-top-right-radius: 3rem;
+                    font-family: Shrikhand, sans-serif;
+                    font-size: 2rem;
+                    font-weight: 400;
+                    transform: translateY(-50px);
+                    width: 100%;
+                    padding-left: 3rem;
+                    padding-right: 3rem;
+                    padding-top: 3rem;
+                }
+                &__favoris {
+                    position: absolute;
+                    right: 2rem;
+                }
+            }
+        }
+
+        &__wrapper {
+            margin-top: -1rem;
+            background: $bg-welcome;
+            padding:0 10px 20px 10px;  
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            gap: 1rem;
+
+            &__entree, &__plats, &__desserts {
+                background: $bg-welcome;
+                display: grid;
+                grid-template-rows: repeat(3, auto);
+                gap: 0.8rem;
+
+                &__title {
+                    font-weight: 300;
+                    position: relative;
+                    margin-bottom: 1rem;
+                    &::after{
+                        content: "";
+                        width: 45px;
+                        height: 4px;
+                        background-color: $bg-new-color;
+                        position: absolute;
+                        left: 0;
+                        bottom: -10px;
+                    }
+                }
+            }
+            
+            &__card-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0.3rem 0.6rem; 
+                position:relative;            
+                background-color: white;
+                border-radius: 0.8rem;
+                overflow: hidden;
+                @include shadow-mixin();
+                &:hover{
+                    cursor: pointer;
+                    & > &__check {             
+                        transform: translateX(-64px);
+                        transition: transform 1s;                                   
+                            & > &__check {
+                                transform: rotate(2turn);    
+                            }
+                    }
+                    & > &__price {
+                        transform: translateX(-48px);
+                        transition: transform 1s;
+                    }
+                    & > &__text {
+                            p{
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                            }
+                    }
+                }   
+                &__text{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: auto;
+                    max-width: 70%;        
+                    padding: 5px 0;
+                    &__title {
+                        font-size: 1.1rem;
+                        font-weight: 500;       
+                    }
+                    &__description {
+                        font-size: 0.8rem;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    } 
+                } 
+                &__price{
+                    font-weight: bold;
+                    display: flex;
+                    align-items: flex-end;
+                    margin-right: 16px;
+                    margin-top: 32px;
+                    width: 10%;
+                    height: auto;
+                    transform-origin: right;        
+                } 
+                &__check{
+                    position: absolute;
+                    right: -64px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 64px;
+                    height: 100%;
+                    background-color: $bg-new-color;
+                    transform-origin: right;    
+                    &__circle{
+                        color:white; 
+                        transform: rotate(-180deg);
+                        transition: transform 500ms ease-in-out;                                        
+                    }
+                }
+            }
+            
+        }
+        .brand-btn {
+            margin-top: -0.8rem;
+            width: 28%;
+            font-size: $font-size-p;
+        }
+    }
+}

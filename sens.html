@@ -7,117 +7,191 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-        <title>Ohmyfood</title>   
+        <title>La note enchantée</title>   
     </head>
-    <body>  
-        <!--Loader -->  
-        <div class="loader">
-        </div>
-        <main>
-                <!-- Présentation -->
-            <div class="presentation">
-                <!--Header -->
+    <body>
+        <main class="home-wrapper">
+            <section class="section-resto">
                 <header class="header">
-                    <div>
-                        <h1>ohmyfood</h1>
+                    <a class="header__link" href="index.html"><i class="fas fa-arrow-left"></i></a>
+                    <div class="header__logo">
+                        <h1>Ohmyfood</h1>
                     </div>
                 </header>
-                <div>
-                    <form action="index.html" method="post">
-                        <!-- location -->
-                        <div>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <input type="search" size="12" value="Paris, Belleville" />
+                <section class="menu-order">
+                    <div class="menu-order__img">
+                        <div class="menu-order__img__wrapper">
+                            <img src="./Maquettes/images/restaurants/gout.jpg" alt="/Maquettes/images/restaurants/gout.jpg" />
                         </div>
-                        <h2>Réservez le menu qui vous convient</h2>
-                        <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                        <button type="submit">Explorer nos restaurants</button>
-                    </form>
-                </div>
-            </div>
-            <div class="method-resto">
-                <div>
-                    <h2>Fonctionnement</h2>
-                    <div>
-                        <div >
-                            <i class="fas fa-mobile-alt fa-fw"></i>
-                            <span>Choisissez un restaurant</span>
+                        <div class="menu-order__img__text">
+                            <h2 class="menu-order__img__text__title">À la française</h2>
+                            <div class="menu-order__img__text__favoris favoris">
+                                <i class="far fa-heart emptyheart"></i>
+                                <i class="fas fa-heart fullheart"></i>
+                            </div>
                         </div>
-                        <div>
-                            <i class="fas fa-list-ul fa-fw"></i>
-                            <span>Composez votre menu</span>
+                        
+                    </div>
+                    <div class="menu-order__wrapper">
+                        <!-- entrée -->
+                        <div class="menu-order__wrapper__entree">
+                            <h2 class="menu-order__wrapper__entree__title">Entrées</h2>
+                            <div class="menu-order__wrapper__card-container">
+                                <div class="menu-order__wrapper__card-container__text">
+                                    <p class="menu-order__wrapper__card-container__text__title">Tartare de thon</p>
+                                    <p class="menu-order__wrapper__card-container__text__description">Assaisonné au yuzu</p>
+                                </div>
+                                <div class="menu-order__wrapper__card-container__price">
+                                    <p>25€</p>
+                                </div>
+                                <div class="menu-order__wrapper__card-container__check">
+                                    <p>
+                                        <i class="fa fa-check"></i>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu-order__wrapper__card-container">
+                                <div class="menu-order__wrapper__card-container__text">
+                                    <p class="menu-order__wrapper__card-container__text__title">Bouchée de homard croustillant </p>
+                                    <p class="menu-order__wrapper__card-container__text__description">Et sa farandole de petits légumes</p>
+                                </div>
+                                <div class="menu-order__wrapper__card-container__price">
+                                    <p>35€</p>
+                                </div>
+                                <div class="menu-order__wrapper__card-container__check">
+                                    <p>
+                                        <i class="fa fa-check"></i>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu-order__wrapper__card-container">
+                                <div class="menu-order__wrapper__card-container__text">
+                                    <p class="menu-order__wrapper__card-container__text__title">Velouté de cèpes </p>
+                                    <p class="menu-order__wrapper__card-container__text__description">Aux truffes</p>
+                                </div>
+                                <div class="menu-order__wrapper__card-container__price">
+                                    <p>20€</p>
+                                </div>
+                                <div class="menu-order__wrapper__card-container__check">
+                                    <p>
+                                        <i class="fa fa-check"></i>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <i class="fas fa-store fa-fw"></i>
-                            <span>Dégustez au restaurant</span>
+                        <!-- plats -->
+                        <div class="menu-order__wrapper__plats">
+                            <h2 class="menu-order__wrapper__plats__title">Plats</h2>
+                
+                            <div class="menu-order__wrapper__card-container">
+                                <div class="menu-order__wrapper__card-container__text">
+                                    <p class="menu-order__wrapper__card-container__text__title">Poulet rôti aux herbes de Provence </p>
+                                    <p class="menu-order__wrapper__card-container__text__description">Et sa crème de truffe</p>
+                                </div>
+                                <div class="menu-order__wrapper__card-container__price">
+                                    <p>40€</p>
+                                </div>
+                                <div class="menu-order__wrapper__card-container__check">
+                                    <p>
+                                        <i class="fa fa-check"></i>
+                                    </p>
+                                </div>
+                            </div>
+                
+                            <div class="menu-order__wrapper__card-container">
+                                <div class="menu-order__wrapper__card-container__text">
+                                    <p class="menu-order__wrapper__card-container__text__title">Langouste rôtie </p>
+                                    <p class="menu-order__wrapper__card-container__text__description">Et ses légumes de saison</p>
+                                </div>
+                                <div class="menu-order__wrapper__card-container__price">
+                                    <p>35€</p>
+                                </div>
+                                <div class="menu-order__wrapper__card-container__check">
+                                    <p>
+                                        <i class="fa fa-check"></i>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="menu-order__wrapper__card-container">
+                                <div class="menu-order__wrapper__card-container__text">
+                                    <p class="menu-order__wrapper__card-container__text__title">Côte de boeuf Angus </p>
+                                    <p class="menu-order__wrapper__card-container__text__description">Et sa purée de panais</p>
+                                </div>
+                                <div class="menu-order__wrapper__card-container__price">
+                                    <p>44€</p>
+                                </div>
+                                <div class="menu-order__wrapper__card-container__check">
+                                    <p>
+                                        <i class="fa fa-check"></i>
+                                    </p>
+                                </div>
+                            </div>
+                
+                        </div>
+                        <!-- desserts -->
+                        <div class="menu-order__wrapper__desserts">
+                            <h2 class="menu-order__wrapper__desserts__title">Desserts</h2>
+                            <div class="menu-order__wrapper__card-container">
+                                <div class="menu-order__wrapper__card-container__text">
+                                    <p class="menu-order__wrapper__card-container__text__title">Farandole de desserts</p>
+                                    <p class="menu-order__wrapper__card-container__text__description">Du chef</p>
+                                </div>
+                                <div class="menu-order__wrapper__card-container__price">
+                                    <p>18€</p>
+                                </div>
+                                <div class="menu-order__wrapper__card-container__check">
+                                    <p>
+                                        <i class="fa fa-check"></i>
+                                    </p>
+                                </div>
+                            </div>
+                
+                            <div class="menu-order__wrapper__card-container">
+                                <div class="menu-order__wrapper__card-container__text">
+                                    <p class="menu-order__wrapper__card-container__text__title">Crème brulée </p>
+                                    <p class="menu-order__wrapper__card-container__text__description">Revisité</p>
+                                </div>
+                                <div class="menu-order__wrapper__card-container__price">
+                                    <p>22€</p>
+                                </div>
+                                <div class="menu-order__wrapper__card-container__check">
+                                    <p>
+                                        <i class="fa fa-check"></i>
+                                    </p>
+                                </div>
+                            </div>
+                
+                            <div class="menu-order__wrapper__card-container">
+                                <div class="menu-order__wrapper__card-container__text">
+                                    <p class="menu-order__wrapper__card-container__text__title">Tiramisu</p>
+                                    <p class="menu-order__wrapper__card-container__text__description">À la noisette</p>
+                                </div>
+                                <div class="menu-order__wrapper__card-container__price">
+                                    <p>23€</p>
+                                </div>
+                                <div class="menu-order__wrapper__card-container__check">
+                                    <p>
+                                        <i class="fa fa-check"></i>
+                                    </p>
+                                </div>
+                            </div>
+                
                         </div>
                     </div>
-                </div>
-                <!-- Restaurants lists-->
-                <div class="restaurants-lists">
-                    <h2>Restaurants</h2>
-                    <div>
-                        <a href="gout.html">
-                            <div>
-                                <img src="Maquettes/images/restaurants/gout.jpg" alt="palette du gout" />
-                                <span >Nouveau</span>
-                            </div>
-                            <div >
-                                <p>La palette du goût</p>
-                                <p>Ménilmontant</p>                            
-                                <i class="far fa-heart emptyheart"></i>
-                                <i class="fas fa-heart fullheart"></i>
-                            </div>
-                        </a>
-                        <a href="gout.html">
-                            <div>
-                                <img src="Maquettes/images/restaurants/gout.jpg" alt="palette du gout" />
-                                <span >Nouveau</span>
-                            </div>
-                            <div >
-                                <p>La note enchantée</p>
-                                <p>Charonne</p>                            
-                                <i class="far fa-heart emptyheart"></i>
-                                <i class="fas fa-heart fullheart"></i>
-                            </div>
-                        </a>
-                        <a href="francaise.html">
-                            <div>
-                                <img src="Maquettes/images/restaurants/francaise.jpg" alt="palette du gout" />
-                                <span >Nouveau</span>
-                            </div>
-                            <div >
-                                <p>À la française</p>
-                                <p>Cité Rouge</p>                            
-                                <i class="far fa-heart emptyheart"></i>
-                                <i class="fas fa-heart fullheart"></i>
-                            </div>
-                        </a>
-                        <a href="sens.html">
-                            <div>
-                                <img src="Maquettes/images/restaurants/sens.jpg" alt="palette du gout" />
-                                <span >Nouveau</span>
-                            </div>
-                            <div >
-                                <p>Le délice des sens</p>
-                                <p>Folie-Méricourt</p>                            
-                                <i class="far fa-heart emptyheart"></i>
-                                <i class="fas fa-heart fullheart"></i>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                    <!-- Bouton -->
+                    <button class="brand-btn">Commander</button>
+                </section>
+            </section>
+        </main>
+        <!--Footer -->
+        <footer class="footer">
+            <div class="foot-wrapper">
+                <h3 class="foot-wrapper__logo">ohmyfood</h3>
+                <a href="#" class="foot-wrapper__list"><i class="fas fa-utensils icone"></i>Proposer un restaurant</a>
+                <a href="#" class="foot-wrapper__list"><i class="fas fa-hands-helping icone"></i>Devenir partenaire</a>
+                <a href="#" class="foot-wrapper__list">Mentions légales</a>
+                <a href="mailto:contact@ohmyfood.com" class="foot-wrapper__list">Contact</a>
             </div>
-            <!--Footer -->
-            <footer class="footer">
-                <div class="foot-wrapper">
-                    <h3 class="foot-wrapper__logo">ohmyfood</h3>
-                    <a href="#" class="foot-wrapper__list"><i class="fas fa-utensils icone"></i>Proposer un restaurant</a>
-                    <a href="#" class="foot-wrapper__list"><i class="fas fa-hands-helping icone"></i>Devenir partenaire</a>
-                    <a href="#" class="foot-wrapper__list">Mentions légales</a>
-                    <a href="mailto:contact@ohmyfood.com" class="foot-wrapper__list">Contact</a>
-                </div>
-            </footer>
-        </div>    
+        </footer>
     </body>
 </html>

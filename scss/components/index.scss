@@ -1,1 +1,28 @@
 // composants indépendants etc ...
+.favoris {
+    font-size: $font-size-h2;
+    .emptyheart {
+        &:hover {
+            display: none; 
+            color: $secondary-color;
+
+            +.fullheart{
+                display: inherit;
+            }
+        }
+    }
+    .fullheart {
+        display: none;
+        color: $secondary-color;
+    }
+}
+
+.brand-btn {
+    @include btn-bg-with-styles-mixin();
+    cursor: pointer;
+    border-color: white;
+    &:hover{
+        background: $secondary-color;
+        @include btn-shadow-dark-mixin();
+    }
+}
