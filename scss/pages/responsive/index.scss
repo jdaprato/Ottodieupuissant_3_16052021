@@ -1,0 +1,152 @@
+// à partir de l'écran des tablettes
+@media screen and (min-width : 769px) {
+
+    body {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "grid_home-wrapper grid_home-wrapper grid_home-wrapper grid_home-wrapper"
+            "grid_footer grid_footer grid_footer grid_footer"
+        ;
+        & #home-wrapper {
+            grid-area: grid_home-wrapper;
+        }
+
+        & .footer {
+            grid-area: grid_footer;
+        }
+    }
+
+    #home-wrapper {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas:
+            "grid_presentation grid_method-resto"
+        ;
+
+        #presentation {
+            grid-area: grid_presentation;
+            min-width: 450px;
+            margin-top: 70px;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            padding-left: 3rem;
+            padding-right: 3rem;
+
+            #presentation__logo {
+                font-size: 4.5rem;
+                margin-bottom: 3rem;
+                margin-top: 3rem;
+            }
+
+            #presentation__location {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                align-items: center;
+
+                #presentation__location__search {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 80%;
+                    height: 50px;
+                    background: linear-gradient(0, $bg-search 90%, darken($bg-search, 10) 100%);
+
+                    & input {
+                    }
+                }
+                
+                h2, p, #presentation__location__submit__btn {
+                    margin-top: 2rem;
+                }
+
+                #presentation__location__submit__btn {
+                }
+            }
+        }
+
+        #method-resto {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+
+            #methods {
+                padding-bottom: 2rem;
+                width: 100%;
+                ol {
+                    padding-left: 3rem;
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                & .fas {
+                    margin-right: 1rem;          
+                }            
+                li {
+                    display: flex;
+                    align-items: center;
+                    padding: 1rem;
+                    border-radius: 1rem;
+                    margin-right: 2rem;
+                    &::before{
+                        font-size: 12px;
+                        padding: 0.5rem 0.8rem;
+                        left: -1.5rem;
+                        top: 0.9rem;
+                        vertical-align: top;
+                    } 
+                }
+            }
+            
+            & #restaurants-lists {
+                & #restaurants-lists__cards {
+                    display: grid;
+                    grid-template-columns: repeat(2, 23rem);
+                    grid-template-rows: repeat(2, 16rem);
+                    gap: 3rem 2rem;
+                    & .card-item {
+                        &__img-wrap {
+                            width: 100%;
+                            height: 100%;
+                            & img {
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+                        &__text-wrap {}
+                    }
+                }
+            }
+        }
+
+        // & .footer {
+        //     grid-area: grid_footer;
+        // }
+    }
+}
+
+
+@media screen and (min-width : 1200px) {
+
+    body {
+        & .restaurant {
+            padding-bottom: 90px;
+            justify-content: space-around;
+
+            &__dish {
+
+                margin-left: 10px;
+                max-width: 45%;
+            }
+        }
+
+        .footer {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+    }
+
+}

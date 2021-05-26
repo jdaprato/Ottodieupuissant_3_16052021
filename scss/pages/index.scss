@@ -1,1 +1,97 @@
-// Blocs de codes d'une seule pages
+#home-wrapper {
+    background: $bg-welcome;
+
+    #presentation {
+        background: $bg-welcome;
+
+        #presentation__logo {
+        }
+
+        #presentation__location {
+            #presentation__location__search {
+                border-radius: 20px;
+                height: 50px;
+                background: linear-gradient(0, $bg-search 90%, darken($bg-search, 10) 100%);
+
+                & input {
+                    border-radius: 3rem;
+                    border: none;
+                    background: $bg-search;
+                    color: $bg-footer;
+                }
+            }
+            
+            h2 {
+                font-size: $font-size-h2;
+            }
+            p {
+                font-size: $font-size-h3;
+            }
+
+
+            #presentation__location__submit__btn {
+                @include btn-bg-with-styles-mixin();
+                cursor: pointer;
+                font-size: $font-size-h3;
+                border-color: white;
+                width: 90%;
+                &:hover{
+                    background: $secondary-color;
+                    @include btn-shadow-dark-mixin();
+                }
+            }
+        }
+    }
+
+    #method-resto {
+        padding: 2rem;
+        grid-area: grid_method-resto;
+        background: white;
+
+        #methods {
+            ol {
+                padding-left: 3rem;
+                counter-reset: number; 
+            }
+            & .fas {
+                color: $primary-color;      
+            }            
+            li {
+                background-color: $bg-welcome;
+                counter-increment: number;
+                position: relative;
+                @include btn-shadow-mixin();
+                &:hover {
+                    background-color: $hover-color;    
+                    cursor: pointer;
+                    & .fas {
+                        color: $secondary-color;      
+                    } 
+                    &::before{
+                        background: $secondary-color;
+                        color: white;
+                    }
+                }
+                &::before{
+                    content: counter(number);
+                    background: $primary-color;
+                    border-radius: 60px;
+                    color: white;
+                    position: absolute;	
+                } 
+            }
+        }
+        & #restaurants-lists {
+            display: grid;
+            grid-template-columns: auto;
+            gap: 1rem;
+            & #restaurants-lists__cards {
+                padding-left: 3rem;
+                & .card-item {
+                    &__img-wrap {}
+                    &__text-wrap {}
+                }
+            }
+        }
+    }
+}

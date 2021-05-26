@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf node_modules && rm -rf package-lock.json && npm cache clean --force",
-    "pushdev": "git add . && git commit -m 'update' && git push origin dev",
+    "clean": "cd ./css && rm -rf prefixed && rm -rf index.css && rm -rf index.css.map && cd .. && rm -rf node_modules && rm -rf package-lock.json && npm cache clean --force",
+    "pushdev": "npm run clean && git add . && git commit -m 'update' && git push origin dev",
     "sass": "cd ./css && rm -rf prefixed && rm -rf index.css && rm -rf index.css.map && cd .. && sass --watch ./scss/index.scss ./css/index.css --style compressed",
     "prefix": "postcss css/index.css --use autoprefixer -d css/prefixed"
   },

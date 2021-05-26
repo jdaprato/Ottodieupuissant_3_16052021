@@ -13,92 +13,88 @@
         <!--Loader -->  
         <div class="loader">
         </div>
-        <main>
-                <!-- Présentation -->
-            <div class="presentation">
-                <!--Header -->
-                <header class="header">
-                    <div>
-                        <h1>ohmyfood</h1>
+        <main id="home-wrapper">
+            <!-- Présentation -->
+            <header id="presentation">
+                <!-- Logo -->
+                <h1 id="presentation__logo">Ohmyfood</h1>
+                <!-- location -->
+                <form action="index.html" method="post" id="presentation__location">
+                    <div id="presentation__location__search">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="search" size="12" value="Paris, Belleville" />
                     </div>
-                </header>
-                <div>
-                    <form action="index.html" method="post">
-                        <!-- location -->
-                        <div>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <input type="search" size="12" value="Paris, Belleville" />
-                        </div>
+                    <div id="presentation__location__submit">
                         <h2>Réservez le menu qui vous convient</h2>
                         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                        <button type="submit">Explorer nos restaurants</button>
-                    </form>
-                </div>
-            </div>
-            <div class="method-resto">
-                <div>
+                        <button type="submit" id="presentation__location__submit__btn">Explorer nos restaurants</button>
+                    </div>
+                </form>
+            </header>
+            <div id="method-resto">
+                <div id="methods">
                     <h2>Fonctionnement</h2>
-                    <div>
-                        <div >
+                    <ol>
+                        <li >
                             <i class="fas fa-mobile-alt fa-fw"></i>
                             <span>Choisissez un restaurant</span>
-                        </div>
-                        <div>
+                        </li>
+                        <li>
                             <i class="fas fa-list-ul fa-fw"></i>
                             <span>Composez votre menu</span>
-                        </div>
-                        <div>
+                        </li>
+                        <li>
                             <i class="fas fa-store fa-fw"></i>
                             <span>Dégustez au restaurant</span>
-                        </div>
-                    </div>
+                        </li>
+                    </ol>
                 </div>
                 <!-- Restaurants lists-->
-                <div class="restaurants-lists">
+                <div id="restaurants-lists">
                     <h2>Restaurants</h2>
-                    <div>
-                        <a href="gout.html">
-                            <div>
+                    <div id="restaurants-lists__cards">
+                        <a class="card-item" href="gout.html">
+                            <div class="card-item__img-wrap">
                                 <img src="Maquettes/images/restaurants/gout.jpg" alt="palette du gout" />
                                 <span >Nouveau</span>
                             </div>
-                            <div >
+                            <div class="card-item__text-wrap">
                                 <p>La palette du goût</p>
                                 <p>Ménilmontant</p>                            
                                 <i class="far fa-heart emptyheart"></i>
                                 <i class="fas fa-heart fullheart"></i>
                             </div>
                         </a>
-                        <a href="gout.html">
-                            <div>
-                                <img src="Maquettes/images/restaurants/gout.jpg" alt="palette du gout" />
+                        <a class="card-item" href="gout.html">
+                            <div class="card-item__img-wrap">
+                                <img src="Maquettes/images/restaurants/enchante.jpg" alt="palette du gout" />
                                 <span >Nouveau</span>
                             </div>
-                            <div >
+                            <div class="card-item__text-wrap">
                                 <p>La note enchantée</p>
                                 <p>Charonne</p>                            
                                 <i class="far fa-heart emptyheart"></i>
                                 <i class="fas fa-heart fullheart"></i>
                             </div>
                         </a>
-                        <a href="francaise.html">
-                            <div>
+                        <a class="card-item" href="francaise.html">
+                            <div class="card-item__img-wrap">
                                 <img src="Maquettes/images/restaurants/francaise.jpg" alt="palette du gout" />
                                 <span >Nouveau</span>
                             </div>
-                            <div >
+                            <div class="card-item__text-wrap">
                                 <p>À la française</p>
                                 <p>Cité Rouge</p>                            
                                 <i class="far fa-heart emptyheart"></i>
                                 <i class="fas fa-heart fullheart"></i>
                             </div>
                         </a>
-                        <a href="sens.html">
-                            <div>
+                        <a class="card-item" href="sens.html">
+                            <div class="card-item__img-wrap">
                                 <img src="Maquettes/images/restaurants/sens.jpg" alt="palette du gout" />
                                 <span >Nouveau</span>
                             </div>
-                            <div >
+                            <div class="card-item__text-wrap">
                                 <p>Le délice des sens</p>
                                 <p>Folie-Méricourt</p>                            
                                 <i class="far fa-heart emptyheart"></i>
@@ -108,16 +104,16 @@
                     </div>
                 </div>
             </div>
-            <!--Footer -->
-            <footer class="footer">
-                <div class="foot-wrapper">
-                    <h3 class="foot-wrapper__logo">ohmyfood</h3>
-                    <a href="#" class="foot-wrapper__list"><i class="fas fa-utensils icone"></i>Proposer un restaurant</a>
-                    <a href="#" class="foot-wrapper__list"><i class="fas fa-hands-helping icone"></i>Devenir partenaire</a>
-                    <a href="#" class="foot-wrapper__list">Mentions légales</a>
-                    <a href="mailto:contact@ohmyfood.com" class="foot-wrapper__list">Contact</a>
-                </div>
-            </footer>
-        </div>    
+        </main>
+        <!--Footer -->
+        <footer class="footer">
+            <div class="foot-wrapper">
+                <h3 class="foot-wrapper__logo">ohmyfood</h3>
+                <a href="#" class="foot-wrapper__list"><i class="fas fa-utensils icone"></i>Proposer un restaurant</a>
+                <a href="#" class="foot-wrapper__list"><i class="fas fa-hands-helping icone"></i>Devenir partenaire</a>
+                <a href="#" class="foot-wrapper__list">Mentions légales</a>
+                <a href="mailto:contact@ohmyfood.com" class="foot-wrapper__list">Contact</a>
+            </div>
+        </footer>
     </body>
 </html>
