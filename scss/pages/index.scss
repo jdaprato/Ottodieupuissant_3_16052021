@@ -88,8 +88,43 @@
             & #restaurants-lists__cards {
                 padding-left: 3rem;
                 & .card-item {
-                    &__img-wrap {}
-                    &__text-wrap {}
+                    @include shadow-mixin();
+                    border-top-left-radius: 0.8rem;
+                    border-top-right-radius: 0.8rem;
+                    color: black;
+                    &__img-wrap {
+                        position: relative;
+
+                        img {
+                            border-top-left-radius: 0.8rem;
+                            border-top-right-radius: 0.8rem;
+                        }
+
+                        & span {
+                            padding: 0.5rem 0.8rem;
+                            background-color:$bg-color;
+                            color: $new-color;
+                            position: absolute;
+                            top:12px;
+                            right: 22px;
+                            border-radius: 0.8rem;
+                        }
+                    }
+                    &__text-wrap {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        border-bottom-left-radius: 0.8rem;
+                        border-bottom-right-radius: 0.8rem;
+                        padding: 0.5rem 0.8rem  0.1rem 0.8rem;
+                        background-color: whitesmoke;
+                        @include shadow-mixin();
+                        .fas {
+                            &:hover {
+                                color: $secondary-color;
+                            }
+                        }
+                    }
                 }
             }
         }
