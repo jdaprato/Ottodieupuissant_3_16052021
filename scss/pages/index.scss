@@ -86,8 +86,13 @@
             grid-template-columns: auto;
             gap: 1rem;
             & #restaurants-lists__cards {
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-template-rows: auto auto;
+                padding-top: -1.5rem;
                 padding-left: 3rem;
                 & .card-item {
+                    margin-bottom: 0.5rem;
                     @include shadow-mixin();
                     border-top-left-radius: 0.8rem;
                     border-top-right-radius: 0.8rem;
