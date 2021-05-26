@@ -124,10 +124,23 @@
                         padding: 0.5rem 0.8rem  0.1rem 0.8rem;
                         background-color: whitesmoke;
                         @include shadow-mixin();
-                        .fas {
+                        &__title {
+                            font-weight: 600;
+                            font-size: 1rem;
+                        }
+                        .emptyheart {
                             &:hover {
+                                display: none; 
                                 color: $secondary-color;
+
+                                +.fullheart{
+                                    display: inherit;
+                                }
                             }
+                        }
+                        .fullheart {
+                            display: none;
+                            color: $secondary-color;
                         }
                     }
                 }
