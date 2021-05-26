@@ -1,0 +1,109 @@
+// à partir de l'écran des tablettes
+@media screen and (min-width : 769px) {
+
+    body {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "grid_home-wrapper grid_home-wrapper grid_home-wrapper grid_home-wrapper"
+            "grid_footer grid_footer grid_footer grid_footer"
+        ;
+        & #home-wrapper {
+            grid-area: grid_home-wrapper;
+        }
+
+        & .footer {
+            grid-area: grid_footer;
+        }
+    }
+
+    #home-wrapper {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "grid_presentation grid_method-resto grid_method-resto grid_method-resto"
+            "grid_presentation grid_method-resto grid_method-resto grid_method-resto"
+            "grid_presentation grid_method-resto grid_method-resto grid_method-resto"
+        ;
+
+        #presentation {
+            grid-area: grid_presentation;
+            min-width: 450px;
+            margin-top: 70px;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+
+            #presentation__logo {
+            }
+
+            #presentation__location {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                align-items: center;
+
+                #presentation__location__search {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 80%;
+                    height: 50px;
+                    background: linear-gradient(0, $bg-search 90%, darken($bg-search, 10) 100%);
+
+                    & input {
+                    }
+                }
+                
+                h2, p, #presentation__location__submit__btn {
+                    margin-top: 2rem;
+                }
+
+                #presentation__location__submit__btn {
+                }
+            }
+        }
+
+        #method-resto {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+
+            #methods {}
+            
+            #restaurants-lists {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+
+        // & .footer {
+        //     grid-area: grid_footer;
+        // }
+    }
+}
+
+
+@media screen and (min-width : 1200px) {
+
+    body {
+        & .restaurant {
+            padding-bottom: 90px;
+            justify-content: space-around;
+
+            &__dish {
+
+                margin-left: 10px;
+                max-width: 45%;
+            }
+        }
+
+        .footer {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+    }
+
+}

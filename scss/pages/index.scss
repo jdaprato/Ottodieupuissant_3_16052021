@@ -1,1 +1,58 @@
-// Blocs de codes d'une seule pages
+#home-wrapper {
+    background: $bg-welcome;
+
+    #presentation {
+        background: $bg-welcome;
+
+        #presentation__logo {
+            font-size: 3rem;
+            margin-top: 3rem;
+        }
+
+        #presentation__location {
+            #presentation__location__search {
+                border-radius: 20px;
+                height: 50px;
+                background: linear-gradient(0, $bg-search 90%, darken($bg-search, 10) 100%);
+
+                & input {
+                    border-radius: 3rem;
+                    border: none;
+                    background: $bg-search;
+                    color: $bg-footer;
+                }
+            }
+            
+            h2 {
+                font-size: $font-size-h2;
+            }
+            p {
+                font-size: $font-size-h3;
+            }
+
+
+            #presentation__location__submit__btn {
+                @include btn-bg-with-styles-mixin();
+                cursor: pointer;
+                font-size: $font-size-h3;
+                border-color: white;
+                width: 90%;
+                &:hover{
+                    background: $secondary-color;
+                    @include btn-shadow-dark-mixin();
+                }
+            }
+        }
+    }
+
+    #method-resto {
+        padding: 2rem;
+        grid-area: grid_method-resto;
+        background: white;
+
+        #methods {}
+        
+        #restaurants-lists {
+        }
+    }
+}
