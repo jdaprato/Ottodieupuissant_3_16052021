@@ -28,6 +28,10 @@
 <Project link : > https://github.com/cyprienotto/Ottodieupuissant_3_16052021
 
 # @Ressources
+- REssources d'aides CSS : 
+    <lien> https://css-tricks.com/
+    <lien> https://css-tricks.com/
+
 -  maquettes Ohmyfood 
     <lien> https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/DW_P3/Maquettes%20Ohmyfood.zip
 

@@ -1,0 +1,26 @@
+
+@keyframes apparition-progressive {
+    0% {
+        opacity: 0;
+        transform: translateY(32px);
+        transform: scale(0.032);
+    }
+    // 50% {
+    //     opacity: 0.5;
+    //     transform: translateY(16px);
+    //     transform: scale(0.016);
+    // }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        transform: translateY(0);
+    }
+}
+.magic-apparition {   
+    @for $i from 1 through 10 {
+        &__#{$i} {
+            animation: apparition-progressive .5s 0.28s*$i  backwards ease-in;
+            transform-origin: bottom;
+        }
+    }
+}

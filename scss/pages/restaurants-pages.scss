@@ -1,4 +1,6 @@
 @media screen and (min-width : 769px) {
+    body {
+    }
 
     .section-resto {
         display: grid;
@@ -6,7 +8,8 @@
         justify-items: center;
         align-items: center;
         overflow: scroll;
-        height: 110%;
+        // height: 110%;
+        height: 90vh;
         & header {
             justify-self: start;
             width: 100vw;
