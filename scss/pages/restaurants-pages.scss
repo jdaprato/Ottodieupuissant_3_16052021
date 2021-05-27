@@ -113,26 +113,6 @@
                 border-radius: 0.8rem;
                 overflow: hidden;
                 @include shadow-mixin();
-                &:hover{
-                    cursor: pointer;
-                    & > &__check {             
-                        transform: translateX(-64px);
-                        transition: transform 1s;                                   
-                            & > &__check {
-                                transform: rotate(2turn);    
-                            }
-                    }
-                    & > &__price {
-                        transform: translateX(-48px);
-                        transition: transform 1s;
-                    }
-                    & > &__text {
-                            p{
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                            }
-                    }
-                }   
                 &__text{
                     display: flex;
                     flex-direction: column;
@@ -159,7 +139,7 @@
                     width: 10%;
                     height: auto;
                     transform-origin: right;        
-                } 
+                }
                 &__check{
                     position: absolute;
                     right: -64px;
@@ -168,14 +148,42 @@
                     align-items: center;
                     width: 64px;
                     height: 100%;
-                    background-color: $bg-new-color;
+                    background-color:$bg-new-color;
                     transform-origin: right;    
-                    &__circle{
-                        color:white; 
-                        transform: rotate(-180deg);
-                        transition: transform 500ms ease-in-out;                                        
+                    .menu-order__wrapper__card-container__check__cercle {
+                        background-color:white;
+                        color: $new-color; 
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 100%;                                
                     }
                 }
+                &:hover{
+                    cursor: pointer;
+                    .menu-order__wrapper__card-container__text p {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    .menu-order__wrapper__card-container__price {
+                        transform: translateX(-48px);
+                        transition: transform 1s;
+                    }
+                    .menu-order__wrapper__card-container__check {             
+                        transform: translateX(-64px);
+                        transition: transform 1s; 
+                    }
+                    .menu-order__wrapper__card-container__check__cercle {
+                        transition-duration: 1.5s;
+                        transform:rotate(360deg);
+                        -webkit-transform:rotate(360deg);
+                        -moz-transform:rotate(360deg);
+                        -ms-transform:rotate(360deg);
+                        -o-transform:rotate(360deg);                                      
+                    }
+                }   
             }
             
         }
