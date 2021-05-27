@@ -1,0 +1,250 @@
+// à partir de l'écran des tablettes
+@media screen and (max-width : 768px) {
+    body {
+        display: grid;
+        grid-template-columns: auto;
+        
+        h2 {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+    }
+    #section-index {
+        padding-left: .5rem;
+        padding-right: .5rem;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        overflow: scroll;
+
+        #presentation {
+            min-width: 90vw;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+
+            #presentation__logo {
+                font-size: 1.8rem;
+                margin-bottom: 0.5rem;
+                margin-top: 0.1rem;
+            }
+
+            #presentation__location {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                #presentation__location__search {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 52%;
+                    height: 50px;
+                    background: linear-gradient(0, $bg-search 90%, darken($bg-search, 10) 100%);
+                }
+
+                & h2 {
+                    font-size: 1rem;
+                    margin-bottom: 0.1rem;
+                    margin-top: 0.1rem;
+                }
+
+                & p {
+                    font-size: 0.95rem;
+                }
+                & .brand-btn {
+                    margin: 1rem auto;
+                    width: 61%;
+                    font-size: 0.95rem;
+                }
+            }
+        }
+
+        #method-resto {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+
+            #methods {
+                padding-bottom: 2rem;
+                width: 100%;
+
+                ol {
+                    padding-left: 3rem;
+                    display: grid;
+                    grid-template-rows: repeat(3, auto);
+                    gap: 0.3rem;
+                }
+                & .fas {
+                    margin-right: 1rem;          
+                }            
+                li {
+                    display: flex;
+                    align-items: center;
+                    padding: 1rem;
+                    border-radius: 1rem;
+                    margin-right: 2rem;
+                    &::before{
+                        font-size: 12px;
+                        padding: 0.5rem 0.8rem;
+                        left: -1.5rem;
+                        top: 0.9rem;
+                        vertical-align: top;
+                    } 
+                }
+            }
+            
+            & #restaurants-lists {
+                & #restaurants-lists__cards {
+                    display: grid;
+                    grid-template-columns: 23rem;
+                    grid-template-rows: repeat(4, 16rem);
+                    gap: 3rem;
+                    & .card-item {
+                        &__img-wrap {
+                            width: 100%;
+                            height: 100%;
+                            & img {
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+                        &__text-wrap {}
+                    }
+                }
+            }
+        }
+    }
+}
+// à partir de l'écran des tablettes
+@media screen and (min-width : 769px) {
+
+    body {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "grid_home-wrapper grid_home-wrapper grid_home-wrapper grid_home-wrapper"
+            "grid_footer grid_footer grid_footer grid_footer"
+        ;
+        & #home-wrapper {
+            grid-area: grid_home-wrapper;
+        }
+
+        & .footer {
+            grid-area: grid_footer;
+        }
+    }
+
+    #section-index {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas:
+            "grid_presentation grid_method-resto"
+        ;
+
+        #presentation {
+            grid-area: grid_presentation;
+            min-width: 450px;
+            margin-top: 70px;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            padding-left: 3rem;
+            padding-right: 3rem;
+
+            #presentation__logo {
+                font-size: 4.5rem;
+                margin-bottom: 3rem;
+                margin-top: 3rem;
+            }
+
+            #presentation__location {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                align-items: center;
+
+                #presentation__location__search {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 80%;
+                    height: 50px;
+                    background: linear-gradient(0, $bg-search 90%, darken($bg-search, 10) 100%);
+
+                    & input {
+                    }
+                }
+                
+                h2, p, #presentation__location__submit__btn {
+                    margin-top: 2rem;
+                }
+
+                #presentation__location__submit__btn {
+                }
+            }
+        }
+
+        #method-resto {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+
+            #methods {
+                padding-bottom: 2rem;
+                width: 100%;
+                ol {
+                    padding-left: 3rem;
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                & .fas {
+                    margin-right: 1rem;          
+                }            
+                li {
+                    display: flex;
+                    align-items: center;
+                    padding: 1rem;
+                    border-radius: 1rem;
+                    margin-right: 2rem;
+                    &::before{
+                        font-size: 12px;
+                        padding: 0.5rem 0.8rem;
+                        left: -1.5rem;
+                        top: 0.9rem;
+                        vertical-align: top;
+                    } 
+                }
+            }
+            
+            & #restaurants-lists {
+                & #restaurants-lists__cards {
+                    padding-left: 3rem;
+                    display: grid;
+                    grid-template-columns: repeat(2, 23rem);
+                    grid-template-rows: repeat(2, 16rem);
+                    gap: 3rem 2rem;
+                    & .card-item {
+                        &__img-wrap {
+                            width: 100%;
+                            height: 100%;
+                            & img {
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+                        &__text-wrap {}
+                    }
+                }
+            }
+        }
+
+        // & .footer {
+        //     grid-area: grid_footer;
+        // }
+    }
+}
