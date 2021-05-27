@@ -36,6 +36,19 @@
 
 - le brief que vous établissez avec le CTO, Paul.
     <lien> https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/DW_P3/Brief%20cre%CC%81atif%20-%20Ohmyfood!.pdf
+        
+# @Contraintes techniques
+
+- Intégration obligatoirement en HTML & CSS
+
+- Versioning du code avec Git et Github
+    <lien> https://github.com/cyprienotto/Ottodieupuissant_3_16052021
+
+- Aucune utilisation de framework.
+
+- Aucune erreur d'alerte au validateur W3C HTML et CSS
+    <lien> https://validator.w3.org/nu/?doc=https%3A%2F%2Fcyprienotto.github.io%2FOttodieupuissant_3_16052021%2Findex.html
+        
 # @Env
 
 - Ubuntu version 21
