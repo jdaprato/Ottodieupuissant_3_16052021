@@ -30,3 +30,39 @@
         }
     }
 }
+
+
+@media screen and (max-width : 768px) {
+    .footer {
+        background: $bg-footer;
+        padding: 1rem;
+    
+        .foot-wrapper {
+            display: grid;
+            grid-template-columns:auto;
+    
+            & * {
+                color: white;
+            }
+    
+            &__logo {
+                font-weight: $font-weight-logo;
+                font-family: Shrikhand, sans-serif;
+                font-size: $font-size-h3;
+            }
+    
+            &__list {
+                font-size: $font-size-p;
+                margin-top: 5px;
+    
+                span {
+                    font-weight: 700;
+                }
+                i {
+                    width: 0.6rem;
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+}
