@@ -25,8 +25,7 @@
 # @Objectif
 - Création du site Ohmyfood! Paris.
 
-<Project link : > https://github.com/cyprienotto/Ottodieupuissant_3_16052021
-
+<Project link : > https://cyprienotto.github.io/Ottodieupuissant_3_16052021/index.html
 # @Ressources
 - REssources d'aides CSS : 
     <lien> https://css-tricks.com/
