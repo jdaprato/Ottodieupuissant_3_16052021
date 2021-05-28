@@ -47,6 +47,9 @@
         }
         & .fas {
             color: $primary-color;      
+        }
+        & .grey--item {
+            color: grey;
         }            
         li {
             background-color: $bg-welcome;
@@ -98,12 +101,13 @@
 
                     & span {
                         padding: 0.5rem 0.8rem;
-                        background-color:$bg-new-color;
+                        background-color: $bg-new-color;
                         color: $new-color;
                         position: absolute;
                         top:12px;
                         right: 22px;
-                        border-radius: 0.8rem;
+                        // border-radius: 0.8rem;
+                        border-radius: 0.2rem;
                     }
                 }
                 &__text-wrap {
